@@ -12,3 +12,19 @@ function isPalindrome(word){
         return false;
     }
 }
+
+function randomNumb(min, max){
+    let random = Math.floor(Math.random() * (max - min +1) + min);
+    return random;
+}
+
+function isEven(numb){
+    let even;
+    if (numb % 2 === 0){
+        even = true;
+    } else {
+        even = false;
+    }
+
+    return even;
+}
