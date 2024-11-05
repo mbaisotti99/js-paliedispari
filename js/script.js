@@ -2,22 +2,28 @@
 let game = prompt("Oggi che gioco scegli? 1 : Palindroma 2 : PoD");
 game = game.toLowerCase();
 game = game.trim();
+let message;
 
 if (game == 1 || game === "palindroma"){
 
     // Palindroma
     
     let userWord = prompt("Scegli una parola o frase");
+    let isPal = isPalindrome(userWord);
     
+    // NORMALIZZAZIONE
+
     userWord = userWord.toLowerCase();
     userWord = userWord.replace(/\s/g, ''); // Trim lascia spazi? :/
+    if (userWord === ""){
+        alert("Ci hai provato, ricarica la pagina e sarai più fortunato, anzi spe faccio io")
+        location.reload();
+    }
     
-    let isPal = isPalindrome(userWord);
     
     console.log(isPal);
     
     
-    let message = "";
     
     if (isPal){
         message = "La parola è palindroma";
@@ -53,18 +59,20 @@ if (game == 1 || game === "palindroma"){
     } else if (oddEvenUser === "dispari" || oddEvenUser == 2){
         betEven = false;
     } else{
-        alert("Siamo proprio simpatici oggi vedo! Ricarica la pagina")
+        alert("Siamo proprio simpatici oggi vedo! Per stavolta ricaricherò la pagina per te")
+        location.reload();
     }
 
     userNumb = parseInt(userNumb);
-    console.log(`Questo è ${userNumb}`);
+    // console.log(`Questo è ${userNumb}`);
     
     if (userNumb > 5){
         userNumb = 5;
     } else if (userNumb < 0){
         userNumb = 0;
     } else if (userNumb === ""){
-        alert("Ricarica la Pagina, hai fatto qualche cafonata");
+        alert("Ricarico la Pagina, hai fatto qualche cafonata");
+        location.reload();
     }
 
     // SVOLGIMENTO
@@ -82,7 +90,7 @@ if (game == 1 || game === "palindroma"){
     if (even === betEven){
         isWin = `Hai VINTO nonostante tutto!`;
     } else{
-        isWin = "Hai PERSO, dovresti vergognarti :( ";
+        isWin = "Hai PERSO, dovresti vergognarti! :( ";
     }
 
     console.log(`Hai scelto ${userNumb}, l'IA sceglie ${iaNumb}, chi vincerà?`);
@@ -94,7 +102,8 @@ if (game == 1 || game === "palindroma"){
     
     
 }else{
-    alert("Eh?? Prova a ricaricare la pagina e riformularti");
+    alert("Eh?? Proviamo a ricaricare la pagina e riformulati");
+    location.reload();
 }
 
-document.writeln("Se vuoi giocare ancora ricarica la pagina");
+document.writeln("Se vuoi giocare ancora ricarica la pagina :D");
