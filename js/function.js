@@ -8,7 +8,7 @@
 function isPalindrome(word){
     let reverse = "";
     for (let j = word.length - 1; j >= 0; j--){
-        reverse = reverse + word[j]; // Non ho trovato un modo di fare con += mi da sempre undefined
+        reverse += word[j]; 
     }
     console.log(`La parola al contrario è ${reverse}`);
     
@@ -29,10 +29,10 @@ function isPalindrome(word){
  * @param {number} max
  * @returns {number}
  */
-function randomNumb(min, max){
-    let random = Math.floor(Math.random() * (max - min +1) + min);
-    return random;
-}
+// function randomNumb(min, max){
+//     let random = Math.floor(Math.random() * (max - min +1) + min);
+//     return random;
+// }
 
 /**
  * Is this number even?

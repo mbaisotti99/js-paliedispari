@@ -13,7 +13,7 @@ if (game == 1 || game === "palindroma"){
     // NORMALIZZAZIONE
     
     userWord = userWord.toLowerCase();
-    userWord = userWord.replace(/\s/g, ''); // Trim lascia spazi? :/
+    userWord = userWord.replace(/\s/g, '');
     if (userWord === ""){
         alert("Ci hai provato, ricarica la pagina e sarai più fortunato, anzi spe faccio io")
         location.reload();
@@ -42,8 +42,8 @@ if (game == 1 || game === "palindroma"){
     let oddEvenUser = prompt("Scegli PARI -1- o DISPARI -2- ?");
     let userNumb = prompt("Scegli un numero da 1 a 5")
 
-    let iaNumb = randomNumb(1, 5);
-
+    let iaNumber = (min, max) => Math.floor(Math.random() * (max - min +1) + min);
+    let iaNumb = iaNumber(1,5);
     let somma;
     let betEven;
     let isWin;
