@@ -10,13 +10,16 @@ function isPalindrome(word){
     for (let j = word.length - 1; j >= 0; j--){
         reverse = reverse + word[j]; // Non ho trovato un modo di fare con += mi da sempre undefined
     }
-    console.log(reverse);
+    console.log(`La parola al contrario è ${reverse}`);
     
-    if (word === reverse){
-        return true;
-    } else {
-        return false;
-    }
+    const result = word === reverse;
+
+    return result;
+    // if (word === reverse){
+    //     return true;
+    // } else {
+    //     return false;
+    // }
 }
 
 /**

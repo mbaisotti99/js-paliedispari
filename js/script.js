@@ -9,16 +9,16 @@ if (game == 1 || game === "palindroma"){
     // Palindroma
     
     let userWord = prompt("Scegli una parola o frase");
-    let isPal = isPalindrome(userWord);
     
     // NORMALIZZAZIONE
-
+    
     userWord = userWord.toLowerCase();
     userWord = userWord.replace(/\s/g, ''); // Trim lascia spazi? :/
     if (userWord === ""){
         alert("Ci hai provato, ricarica la pagina e sarai più fortunato, anzi spe faccio io")
         location.reload();
     }
+    let isPal = isPalindrome(userWord);
     
     
     console.log(isPal);
